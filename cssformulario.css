@@ -1,10 +1,11 @@
+
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: Roboto, Arial, sans-serif;
-    background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)), 
+    background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)),
     url(gaming2.jpg);
     margin: 0;
     padding: 0;
@@ -15,7 +16,7 @@ body {
     max-height: 1200px;
     margin: 90px auto; /* Centra el formulario */
     padding: 20px;
-    background: linear-gradient(to left, #f8b8b3, #9f1bfd);
+    background: linear-gradient(to left, #9f1bfd, #f8b8b3);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: auto; /* Ajusta la altura automáticamente */
@@ -35,6 +36,7 @@ label {
     margin-top: 10px;
     display: block;
     color: #020000;
+    font-size: 0.9em; /* Reducir el tamaño de la fuente en las etiquetas */
 }
 
 input[type="text"],
@@ -43,10 +45,11 @@ input[type="tel"],
 select,
 textarea {
     width: 100%;
-    padding: 10px;
+    padding: 8px; /* Ajustar el padding */
     margin: 10px 0;
     border: 1px solid #030000;
     border-radius: 4px;
+    font-size: 0.9em; /* Reducir el tamaño de la fuente en los campos de entrada */
     max-width: 100%; /* Ajusta el ancho para evitar desbordamiento */
 }
 
@@ -58,7 +61,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 0.9em; /* Reducir el tamaño de la fuente en el botón */
     margin: 10px 0; /* Asegura espaciado con otros elementos */
 }
 
@@ -74,4 +77,60 @@ button:hover {
     display: inline;
     font-size: 14px;
     color: #000000;
+}
+
+input, select, textarea {
+    margin-top: 4px; /* Espacio entre el label y el input/textarea */
+}
+
+/* Estilo para el placeholder */
+input::placeholder,
+textarea::placeholder {
+    font-size: 0.8em; /* Hacer más pequeño el texto del placeholder */
+    color: #888; /* Cambiar el color del placeholder si lo deseas */
+}
+
+/* Ajustar el estilo del select */
+select {
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    padding: 8px; /* Aumentar el espacio interior */
+    font-size: 0.9em; /* Aumenta el tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Bordes grises */
+    background-color: #f8f9fa; /* Fondo claro */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Estilo del texto dentro del select */
+select:focus {
+    border-color: #0071c5; /* Cambia el color del borde cuando el campo está enfocado */
+    outline: none; /* Elimina el borde predeterminado del navegador */
+}
+
+/* Opciones del select */
+option {
+    padding: 10px;
+    font-size: 0.9em; /* Tamaño de texto dentro de las opciones */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 0.85em; /* Reducir el tamaño de la fuente en dispositivos pequeños */
+    }
+
+    button {
+        font-size: 0.85em;
+    }
 }
