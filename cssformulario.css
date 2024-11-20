@@ -118,7 +118,11 @@ option {
     .container {
         padding: 15px;
     }
-
+    h1 {
+        text-align: center;
+        color: #050000;
+        font-size: 4.5em !important;/* Aumentar el tamaño de la fuente */
+    }
     button {
         padding: 8px;
     }
